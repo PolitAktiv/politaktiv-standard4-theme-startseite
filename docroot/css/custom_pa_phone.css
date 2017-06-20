@@ -1,0 +1,237 @@
+
+
+@include respond-to(phone){ 
+
+/* ++++++++++++++++
+++++++BASICS+++++++
++++++++++++++++++*/
+
+	.aui body {
+   		 font-size: 12pt;
+   		 padding-left: 0px;
+   		 padding-right: 0px;
+	}
+
+    .aui .portlet-boundary{
+    	padding-top: 1px;
+    	padding-bottom: 1px;
+    }
+	
+	
+	.aui #content{
+	    padding: 0px;
+	}
+
+	.aui #heading {
+    	position: relative;
+    	overflow: initial;
+    	padding-top: 0px;		
+	}
+
+	#wrapper{
+    	padding-left: 15px;
+    	padding-right: 15px;
+	}
+	
+		
+	.ist-topbar{
+    	display: none;
+	}
+	
+	.aui .portlet-dockbar {
+    	width: inherit;
+    	float: right;
+	}
+	
+	.page-title{
+		width: 100%;
+		padding-bottom: 40px;
+	}
+	
+	.aui #breadcrumbs{
+		left: 0%;
+	}
+	
+	.logo{
+		width: auto;
+	}
+	
+
+/* ++++++++++++++++
+++++++IMAGE++++++++
++++++++BlOCK+++++++
++++++++++++++++++*/
+
+	
+		#center-image-block {
+		width: 68%;
+		float: right;
+		margin-right: 1%;
+	}
+
+	#right-image-block {
+		width: 15%;
+		float: right;
+	}
+
+/* ++++++++++++++++
+++++NAVIGATION+++++
++++++++++++++++++*/
+
+	.aui #navigation{
+		position: absolute;
+		width: 100%;
+		left: 0px;
+	}
+	  
+	.aui #navigation li{
+		background-image: none;
+	}
+	
+	.aui #navigation .nav .dropdown-menu > .lfr-nav-item{
+		background-image: none;
+		padding-left: 20px;
+	}
+	
+	.aui #navigation.open {
+    	top: 76px;
+	}
+	
+		
+	.aui #navigation .navbar-inner{
+		background: none repeat scroll 0% 0% rgb(244, 244, 244);
+		border-top: 1px solid #CCC;
+	}
+
+	.aui #navigation .navbar-inner li a{
+		color: #000;
+	}	
+
+	.aui #navigation .nav li.active > a{
+		background-color: #118ADE;
+		background-image: none;
+		color: #FFF;
+	}
+	
+	.aui #navigation .nav li > a:hover{
+		background-color: #FFF;
+		color: #000;
+	}
+	
+	
+	.aui #navigation .nav .dropdown-menu a{
+		color: #FFF;
+		background-color: #118ADE;
+	}
+	
+	.aui #navigation .nav .dropdown-menu a:hover{
+		color: #000;
+		background-color: #FFF;
+	}
+	
+	.aui #navigation .nav .dropdown-menu{
+		background: #F4F4F4 !important;
+	}
+
+	  
+	
+/* ++++++++++++++++
++++++++MAIN++++++++
++++++CONTENT+++++++
++++++++++++++++++*/
+	
+	/*reset custom layout columns */
+	
+	.aui .row-fluid .width5of12left{
+		width: auto; 
+		float: left;
+		margin-right: initial;
+		padding: 2px;
+	}
+	
+	 .aui .row-fluid .width5of12right{
+	 	width: auto;
+	 	float: left;
+	 	padding: 2px;
+	 }
+	
+	.aui .row-fluid .width3of12left{
+		width: auto; 
+		float: left;
+		margin-right: initial;
+		padding: 2px;
+	}
+	
+	.aui .row-fluid .width3of12right{
+		width: auto;
+		float: left;
+		padding: 2px;
+	} 
+	
+	.aui .row-fluid .width4of12left{
+		width: auto; 
+		float: left;
+		margin-right: initial;
+		padding: 2px;
+	}
+	
+	.aui .row-fluid .width4of12right{
+		width: auto;
+		float: left;
+		padding: 2px;
+	}
+
+	.aui .row-fluid .width8of12{
+		margin-left: initial;		
+		width: 100%;
+		float: left;
+		padding: 2px;
+    }
+    
+    .aui .row-fluid .smartphone-only-content{
+		padding: 2px;
+    }
+    
+
+
+/* ++++++++++++++++
+++SMARTPHONE+++++++
++++++++EXCLUSIVE+++
++++++CONTENT+++++++
++++++++++++++++++*/ 
+	
+	/* show */
+	#smartphone-exclusive-content-container { 
+		display: block;
+	}
+	
+	/* hide boxes */
+	.aui .row-fluid .width2of12right, .aui .row-fluid .width2of12left{
+		width: 0px;
+		height: 0px;
+		margin: 0px;
+		padding: 0px;
+		display: none;
+	}
+	
+/* ++++++++++++++++
+++++++OTHER++++++++
++++++++STYLES++++++
++++++++++++++++++*/ 
+	
+	/*empty columns also need space, remove padding*/
+	.portlet-column-content.empty {
+    	padding: 0px;
+	}
+	
+	/*show smarthphone-content-toogle on the very right of page*/
+	#smartphone-content-toggle{
+		margin-right: 0px;
+	}
+	
+	/*move adminbar so that it does not overflow the content*/
+	.aui .dockbar{
+		left: -20px;
+	}
+	
+}

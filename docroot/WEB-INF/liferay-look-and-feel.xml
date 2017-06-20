@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 6.2.0//EN" "http://www.liferay.com/dtd/liferay-look-and-feel_6_2_0.dtd">
+
+<look-and-feel>
+	<compatibility>
+		<version>6.2.1+</version>
+	</compatibility>
+	<theme id="startseite-standard4-theme" name="Startseite Standard 4" >
+		<settings>
+				<setting key="systemGroupId" value="10165" />
+				<setting key="istTopBarArticleId" value="SYSTEM_IST_TOP_BAR" />
+				<setting key="staticSocialBookmarId" value="SYSTEM_STATIC_SOCIAL_BM" />
+				<setting key="footerArticleId" value="SYSTEM_FOOTER" />
+				<setting key="sponsorArticleId" value="SYSTEM_SPONSOR" />
+			    <setting key="advertisementId" value="ADVERTISEMENT" />
+			    <setting key="headerBackgroundImage" value="HEADER-HINTERGRUND-LINK" />
+			    <setting key="defaultDKImage" value="DEFAULT-DK-IMAGE" />
+			    <setting key="customDKLogo" value="CUSTOM-DK-LOGO" />
+			    <setting key="languages" value="de_DE,en_US,es_ES,sv_SE" />
+			    <setting configurable="true" key="bullet-style" options="dots,arrows" type="select" value="dots" />		
+			    <setting configurable="true" key="portlet-setup-show-borders-default" type="checkbox" value="true" />
+				<setting configurable="false" key="show-site-name-default" value="true" />
+				<setting configurable="false" key="show-site-name-supported" value="true" />
+			</settings>
+			<roles>
+				<role-name>User</role-name>
+			</roles>
+	</theme>
+</look-and-feel>
