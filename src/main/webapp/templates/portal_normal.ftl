@@ -30,7 +30,7 @@
 		<div id="scroller" class="row headerRow">
 			<div class="navbar-header" id="heading">
 				<a class="${logo_css_class}" href="${site_default_url}" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">
-					<img alt="${logo_description}" height="64" src="${site_logo}" />
+					<img alt="${logo_description}" height="60" src="${site_logo}" />
 				</a>
 
 				<#if show_site_name>
@@ -76,18 +76,22 @@
 	</section>
 	
 <script type="text/javascript"> 
-$(window).scroll(function() {
-    if ($(window).scrollTop() > 55) {
-    	if ($('#ControlMenu').length > 0) {
-    		$('#scroller').addClass('stuckLoggedIn');
-    	} else {
-    		$('#scroller').addClass('stuck');
-    	} 
-    } else {
-        $('#scroller').removeClass('stuck');
-        $('#scroller').removeClass('stuckLoggedIn');
-    }
-});
+$(function(){
+        var scroller = $('#scroller').offset().top;
+ 
+        $(window).scroll(function(){
+                if( $(window).scrollTop() > scroller ) {
+                    if ($('#ControlMenu').length > 0) {
+    					$('#scroller').addClass('stuckLoggedIn');
+    				} else {
+    					$('#scroller').addClass('stuck');
+    				} 
+                } else {
+                    $('#scroller').removeClass('stuck');
+                    $('#scroller').removeClass('stuckLoggedIn');
+                }
+        });
+  });
 </script> 
 
 	<footer class="container-fluid-1280" id="footer" role="contentinfo">

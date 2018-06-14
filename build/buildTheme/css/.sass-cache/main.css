@@ -3922,33 +3922,48 @@ input.switch:empty ~ .switch-bar:after, input.switch:empty ~ .switch-bar:before,
   font-weight: 400 !important; }
 
 /* global margin */
+/*
 .portlet-column {
-  padding-left: 10%;
-  padding-right: 10%; }
+	padding-left: 10%;
+	padding-right: 10%;
+}
 
 #column-2 {
-  padding-right: 10px !important; }
+	padding-right: 10px !important;
+}
 
 #column-3 {
-  padding-left: 10px !important; }
-
+	padding-left: 10px !important;
+}
+*/
 /* ------------------------------------ */
 /* fixed header */
 .stuck {
   position: fixed;
   left: 0;
   right: 0;
-  top: 0; }
-
-.stuckLoggedIn {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 64px; }
+  top: 0;
+  margin-top: 0px !important; }
 
 .headerRow {
   background-color: white;
-  z-index: 10; }
+  z-index: 1;
+  height: 62px;
+  border-bottom: 2px solid #e3e6e8;
+  margin-top: 10px; }
+
+.sign-in .text-default {
+  border: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding-top: 5px !important;
+  padding-right: 5px !important;
+  Padding-bottom: 5px !important;
+  padding-left: 15px !important;
+  background-color: #47647a;
+  color: white;
+  margin-top: 5px; }
 
 /* ------------------------------------ */
 /* search portlet */
@@ -4106,8 +4121,6 @@ body {
       left: 2px;
       position: relative;
       top: 6px; } }
-  #banner .user-personal-bar .icon-user, #banner .user-personal-bar .user-full-name {
-    display: none; }
   @media (max-width: 767px) {
     #banner .navbar-nav {
       margin: 0 0; } }

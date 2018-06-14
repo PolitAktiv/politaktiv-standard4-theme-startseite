@@ -1,5 +1,0 @@
-# *** Releases Log ***
-
-* 2017-20-06
-  * first version, derivated of pa-standard-3-theme
-
