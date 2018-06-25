@@ -9,25 +9,30 @@ AUI().ready(
 	}
 );
 
-function moveScroller() {
-    var $anchor = $("#scroller-anchor");
-    var $scroller = $('#scroller');
+$(document).ready(function() {
+	if ($('#ControlMenu').length > 0) {
+    	$('#contentHeader').addClass('headerLoggedIn');
+   	}
+});
 
-    var move = function() {
-        var st = $(window).scrollTop();
-        var ot = $anchor.offset().top;
-        if(st > ot) {
-            $scroller.css({
-                position: "fixed",
-                top: "0px"
-            });
-        } else {
-            $scroller.css({
-                position: "relative",
-                top: ""
-            });
-        }
-    };
-    $(window).scroll(move);
-    move();
-}
+$(function(){
+        var scroller = $('#scroller').offset().top;
+ 
+        $(window).scroll(function(){
+                if( $(window).scrollTop() + $('#ControlMenu').height() > scroller ) {
+                	
+                	$('#scroller').addClass('stuck');
+                	$('#personal-bar').addClass('invisible');
+                	
+                    if ($('#ControlMenu').length > 0) {
+    					var controlMenuHeight = $('#ControlMenu').height();
+    					$('#scroller').css('top', controlMenuHeight + 'px');
+    				}
+    				
+                } else {
+                    $('#scroller').removeClass('stuck');
+                    $('#personal-bar').removeClass('invisible');
+                    $('#scroller').css('top', '');
+                }
+        });
+  });

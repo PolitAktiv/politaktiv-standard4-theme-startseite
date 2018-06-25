@@ -55,7 +55,9 @@
 		<div class="autofit-float autofit-row">
 			<div class="autofit-col autofit-col-expand">
 				<#if !stringUtil.equals(portlet_display.getPortletDecoratorId(), "barebone")>
+				<#if !stringUtil.equals(portlet_display.getPortletDecoratorId(), "onlyBorder")>
 					<h2 class="portlet-title-text">${portlet_title}</h2>
+				</#if>
 				</#if>
 			</div>
 

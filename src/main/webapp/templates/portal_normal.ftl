@@ -48,7 +48,7 @@
 						<span class="icon-bar"></span>
 					</button>
 
-					<div class="pull-right user-personal-bar">
+					<div id="personal-bar" class="pull-right user-personal-bar">
 						<@liferay.user_personal_bar />
 					</div>
 				</#if>
@@ -74,25 +74,6 @@
 			</@>
 		</#if>
 	</section>
-	
-<script type="text/javascript"> 
-$(function(){
-        var scroller = $('#scroller').offset().top;
- 
-        $(window).scroll(function(){
-                if( $(window).scrollTop() > scroller ) {
-                    if ($('#ControlMenu').length > 0) {
-    					$('#scroller').addClass('stuckLoggedIn');
-    				} else {
-    					$('#scroller').addClass('stuck');
-    				} 
-                } else {
-                    $('#scroller').removeClass('stuck');
-                    $('#scroller').removeClass('stuckLoggedIn');
-                }
-        });
-  });
-</script> 
 
 	<footer class="container-fluid-1280" id="footer" role="contentinfo">
 		<div class="row">
