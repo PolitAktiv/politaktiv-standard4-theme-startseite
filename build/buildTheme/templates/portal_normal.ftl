@@ -11,6 +11,24 @@
 
 	<@liferay_util["include"] page=top_head_include />
 	
+	<#-- Include custom CSS and JS if it exists -->
+	
+	<#if fileService.getFileEntry(themeDisplay.getCompanyGroupId(),  0, "${globalCSSFileName}")??>
+		<link href="${cssIncludePath}" rel="stylesheet">
+	</#if> 
+
+	<#if fileService.getFileEntry(themeDisplay.getCompanyGroupId(),  0, "${globalJSFileName}")??>
+		<script type="text/javascript" src="${jsIncludePath}"></script>
+	</#if>
+	
+	<#if fileService.getFileEntry(themeDisplay.getScopeGroupId(),  0, "${localCSSFileName}")??>
+		<link href="${cssDKIncludePath}" rel="stylesheet">
+	</#if>
+	
+	<#if fileService.getFileEntry(themeDisplay.getScopeGroupId(),  0, "${localJSFileName}")??>
+		<script type="text/javascript" src="${jsDKIncludePath}"></script>
+	</#if>
+	
 	<link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet"> 
 </head>
 
