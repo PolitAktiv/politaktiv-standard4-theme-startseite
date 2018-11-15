@@ -48,7 +48,7 @@
 		<div id="scroller" class="row headerRow">
 			<div class="navbar-header" id="heading">
 				<a class="${logo_css_class}" href="${site_default_url}" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">
-					<img alt="${logo_description}" height="60" src="${site_logo}" />
+					<img alt="${logo_description}" height="58" src="${site_logo}" style="padding: 5px;padding-left: 10px;" />
 				</a>
 
 				<#if show_site_name>
@@ -94,9 +94,15 @@
 	</section>
 
 	<footer class="container-fluid-1280" id="footer" role="contentinfo">
-		<div class="row">
-			<@liferay.language key="powered-by" /> <a href="http://www.liferay.com" rel="external">Liferay</a>
-		</div>
+ 		<#assign footerInstanceID = themeDisplay.getScopeGroupId() + "_footer" />
+ 		<#assign VOID = freeMarkerPortletPreferences.setValue("portletSetupPortletDecoratorId", "barebone") />
+ 		
+		<@liferay_portlet["runtime"]
+			defaultPreferences="${freeMarkerPortletPreferences}"
+			portletProviderAction=portletProviderAction.VIEW
+			instanceId="${footerInstanceID}"
+			portletName="com_liferay_journal_content_web_portlet_JournalContentPortlet" />
+			${freeMarkerPortletPreferences.reset()}
 	</footer>
 </div>
 
